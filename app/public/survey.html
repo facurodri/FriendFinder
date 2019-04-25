@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <!--Jquery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body id="surveyPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-12-md">
+                <h1>Survey Questions : Friend Finder</h2>
+                <hr>
+                <h3 class="QHead"><strong>About You</strong></h3>
+                <h4>Name (Required)</h4>
+                <input type="text" id="name" class="form-control" required>
+
+                <h4>Link to Photo Image (Required)</h4>
+                <input name="photo1" type="text" id="photo" class="form-control" required>
+                <hr>
+                <h3 class="QHead"><strong>Question 1</strong></h3>
+                <h4>Dogs are great.</h4>
+                <select name="qs1" class="chosenAns" id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 2</strong></h3>
+                <h4>Ketchup goes on steaks.</h4>
+                <select class="chosenAns" id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 3</strong></h3>
+                <h4>Enjoys being outside.</h4>
+                <select class="chosenAns" id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 4</strong></h3>
+                <h4>Excited to watch Game Of Thrones.</h4>
+                <select class="chosenAns" id="q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 5</strong></h3>
+                <h4>Excited to run a 10k Marathon on Christmas morning.</h4>
+                <select class="chosenAns" id="q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 6</strong></h3>
+                <h4>Saying no to a pizza.</h4>
+                <select class="chosenAns" id="q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 7</strong></h3>
+                <h4>Micheal from The Office, was actually a great boss.</h4>
+                <select class="chosenAns" id="q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 8</strong></h3>
+                <h4>You fight for what is right, no matter the consequences. </h4>
+                <select class="chosenAns" id="q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 9</strong></h3>
+                <h4>Has goals in life</h4>
+                <select class="chosenAns" id="q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h3 class="QHead"><strong>Question 10</strong></h3>
+                <h4>How excellent was this questionare</h4>
+                <select class="chosenAns" id="q10">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-success btn-lg" id="submit"><i class="fa fa-check"
+                        aria-hidden="true"></i>
+                    Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="friendMatch" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h2 class="modal-title">Friend Match!</h2>
+                </div>
+                <div class="modal-body text-center">
+                    <h3>You Matched With: <span id="matchName"></span></h3>
+                    <img id="matchPic" src="" alt="match picture"></img>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success closeBtn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p><a href="/">Home Page</a>||<a href="/api/survey">API Table Link</a></p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $("#submit").on("click", function (event) {
+                event.preventDefault();
+
+                function validateForm() {
+                    var isValid = true;
+                    $(".form-control").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+
+                    $(".chosenAns").each(function () {
+
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }
+
+                if (validateForm()) {
+                    var newFriend = {
+                        profileName: $("#name").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]
+                    }
+
+                    // $.ajax({
+                    //     method: "POST",
+                    //     url: "/api/friends",
+                    //     data: newFriend,
+                    //     
+                    // }).then(function(data){
+
+                    // })
+
+                    $.post("/api/survey", newFriend, function (data) {
+
+                        // var friendMatch
+                        console.log(data);
+                        $("#matchName").html(data.name);
+                        $("#matchPic").attr("src", data.photo);
+                        uploadSuccess();
+                        //I need modal function here
+
+                    })
+                } else {
+                    alert("Please fill out all requirements and Try again")
+                }
+            });
+        });
+
+        var modal = document.getElementById("friendMatch");
+        function uploadSuccess() {
+
+            console.log("success modal");
+            modal.style.display = "block";
+
+        };
+        $(".closeBtn").on("click", function () {
+            modal.style.display = "none";
+            cleanUp();
+
+        });
+
+        function cleanUp() {
+                $("#name").val(""),
+                $("#photo").val(""),
+                $("#q1").val(""),
+                $("#q2").val(""),
+                $("#q3").val(""),
+                $("#q4").val(""),
+                $("#q5").val(""),
+                $("#q6").val(""),
+                $("#q7").val(""),
+                $("#q8").val(""),
+                $("#q9").val(""),
+                $("#q10").val("")
+        }
+    </script>
+</body>
+
+</html>

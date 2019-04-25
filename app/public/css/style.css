@@ -1,0 +1,40 @@
+.jumbotron {
+    background:url(../images/friendsPic.jpg);
+    background-position: center;
+    background-clip: border-box;
+    background-size: cover;
+    padding-top: 20%;
+      padding-bottom: 20%;
+}
+#homePage{
+    background-color: rgb(7, 221, 157);
+}
+h1,.modal-title, .QHead{
+    color: rgb(7, 221, 157);
+    text-shadow: 1px 1px 2px black;
+    
+}
+a {
+    color: green;
+}
+.modal-body {
+    background-color: rgb(7, 221, 157);
+    color: black;
+
+}
+.modal {
+    box-shadow: 0px 0px 3px black;
+}
+#surveyPage {
+    background: url(../images/car2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h4 {
+    text-emphasis-style: bold;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px whitesmoke;
+
+
+}
