@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Survey Page</title>
-
    <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
    <!--Jquery-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body id="surveyPage">
+    <!-- Container for Qs & form-->
     <div class="container">
         <div class="row">
             <div class="col-12-md">
@@ -135,6 +133,7 @@
             </div>
         </div>
     </div>
+    <!-- Modal to show Friend Match-->
     <div class="modal" id="friendMatch" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -155,31 +154,33 @@
 
     <footer class="footer text-center">
         <div class="container">
-            <p><a href="/">Home Page</a>||<a href="/api/survey">API Table Link</a></p>
+            <p><a href="/">Home Page</a>| |<a href="/api/survey">API Friends Table Link</a></p>
         </div>
     </footer>
     <script>
+        // event listener ready 
         $(document).ready(function () {
             $("#submit").on("click", function (event) {
+                //makes sure it doesn't refresh page when submit
                 event.preventDefault();
-
+                //validate function to make sure everything is fulled out
                 function validateForm() {
                     var isValid = true;
+                    //Jquery, Each() will run through each element called in form-control and run the function
                     $(".form-control").each(function () {
                         if ($(this).val() === "") {
                             isValid = false;
                         }
                     });
-
+                    // same as about but for .chosenAns class
                     $(".chosenAns").each(function () {
-
                         if ($(this).val() === "") {
                             isValid = false;
                         }
                     });
                     return isValid;
                 }
-
+                // contitional statement to execute and create new friend if values are true and nothing is empty
                 if (validateForm()) {
                     var newFriend = {
                         profileName: $("#name").val().trim(),
@@ -197,25 +198,14 @@
                             $("#q10").val()
                         ]
                     }
-
-                    // $.ajax({
-                    //     method: "POST",
-                    //     url: "/api/friends",
-                    //     data: newFriend,
-                    //     
-                    // }).then(function(data){
-
-                    // })
-
+                    // Ajax call w/ Jquery .post to my api/survey with callback
                     $.post("/api/survey", newFriend, function (data) {
 
-                        // var friendMatch
                         console.log(data);
                         $("#matchName").html(data.name);
                         $("#matchPic").attr("src", data.photo);
+                        // uploadSuccess Envokes modal
                         uploadSuccess();
-                        //I need modal function here
-
                     })
                 } else {
                     alert("Please fill out all requirements and Try again")
@@ -233,9 +223,8 @@
         $(".closeBtn").on("click", function () {
             modal.style.display = "none";
             cleanUp();
-
         });
-
+        //function to clear out previous entries
         function cleanUp() {
                 $("#name").val(""),
                 $("#photo").val(""),

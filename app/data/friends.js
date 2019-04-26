@@ -1,5 +1,4 @@
-
-
+// Objects array for Friend finder database (acts like database);
 
 var friendsArray = [
   {
@@ -72,5 +71,5 @@ var friendsArray = [
 
   }
 ];
-
+// exports Friends array db to my other files to be used.
 module.exports = friendsArray;
